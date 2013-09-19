@@ -4,6 +4,8 @@ app.use(express.logger());
 
 app.get('/', function(request, response) {
   response.send('Hello World again3!');
+    var text = fs.readFileSync('index.html','utf8');
+    response.send(text);
 });
 
 var port = process.env.PORT || 5000;
